@@ -4,7 +4,7 @@
  * @Author: wyzf
  * @Date: 2022-06-15 09:52:12
  * @LastEditors: wyzf
- * @LastEditTime: 2022-06-16 09:33:51
+ * @LastEditTime: 2022-06-16 10:01:41
  */
 #include <stdio.h>
 
@@ -23,6 +23,10 @@ void fortune_cookie(char msg[]) {
     //int length = ;
     printf("msg occupies %d bytes\n", sizeof(msg));
     //sizeof(msg)输出的是指针变量的大小
+}
+
+void skip(char *msg) {
+    puts(msg + 6);
 }
 int main() {
     int latitude = 32;
@@ -58,10 +62,19 @@ int main() {
 
     //数组变量与指针变量有一点区别，把数组赋值给指针变量，指针
     //变量只会包含数组的地址信息，对数组的长度不清楚，丢失了部分
-    //信息，只要把数组传递给函数，数组就会退化为指针，要注意，
+    //信息，只要把数组传递给指针，数组就会退化为指针，要注意，
     //会引发一些不易察觉的错误
     printf("数组第三个字符是：%c\n", *(t + 2));
     //这里 s[2]==*(t+2)  2[s]==*[2+s]  s与t都包含数组首元素地址信息
     //但是数组名s还包含数组长度的信息，这是指针变量t不包含的信息
+    char *msg_from_amy = "Don't call me";
+    char msg_amy[] = "Are you call me?";
+    skip(msg_from_amy);
+    skip(msg_amy);
+    int doses[] = { 1,3,2,1000 };
+    printf("doses[3]==3[doses]%d\n", 3[doses]);
+    printf("doses的地址是：%#p\n", doses);
+    printf("doses+1的地址是：%#p\n", doses + 1);
+    // 查看打印信息可得相差4个字节，所以指针变量有类型，需要在指针算术运算时根据数据类型知道加多少
     return 0;
 }
