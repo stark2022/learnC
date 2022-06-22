@@ -23,17 +23,17 @@ void demo01(void) {
         }
     }
 }
-//a: 1-a; b:b位 不重复
-void demo02(int a, int b) {
-    int n[b], m[a];
-    for (int t = 0;t < a;t++) {
-        m[t] = t + 1;
-    }
-    printf("\n");
-    for (int j = 0;j < b;j++) {
-        for ()
-    }
-}
+// //a: 1-a; b:b位 不重复
+// void demo02(int a, int b) {
+//     int n[b], m[a];
+//     for (int t = 0;t < a;t++) {
+//         m[t] = t + 1;
+//     }
+//     printf("\n");
+//     for (int j = 0;j < b;j++) {
+//         for (j=0;j<a;)
+//     }
+// }
 
 int main() {
     demo01();
