@@ -7,14 +7,14 @@
  * @Author: wyzf
  * @Date: 2022-06-24 16:54:30
  * @LastEditors: wyzf
- * @LastEditTime: 2022-06-24 17:07:21
+ * @LastEditTime: 2022-06-24 17:17:14
  */
 #include <stdio.h>
 
 int main() {
     int f1 = 1, f2 = 1, i;
     for (i = 1;i <= 20;i++) {
-        printf("%12d%12d", f1, f2);
+        printf("%8d%12d", f1, f2);
         if (i % 2 == 0) {
             printf("\n");
         }
